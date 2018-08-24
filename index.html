@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Github Finder</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+    <!-- Local CSS-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header & Nav Menu-->
+    <nav>
+        <div class="nav-wrapper blue-grey ">
+            <div class="container">
+                <a href="#" class="brand-logo">GithubFinder</a>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+    <!-- Main-->
+    <main>
+        <!-- Search User -->
+        <div class="container">
+            <div class="row">
+                <div class="input-field col l10 m10 col   s10 ">
+                    <i class="material-icons green-text prefix right">search</i>
+                    <input placeholder="Search Users on github" id="user" type="text">
+                    <label for="user">Enter User Name</label>
+                </div>
+            </div>
+            <!-- User not found message -->
+            <div id="message">
+
+            </div>
+            <!-- User Profile -->
+            <div id="profile">
+
+            </div>
+
+    </main>
+    <!-- Footer starts here -->
+    <footer class="page-footer blue-grey ">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 All rights reserved
+                <a class="grey-text text-lighten-4 right" href="#!">©GithubFinder</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- Javascript files here -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="js/github.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+
+
+</html>
