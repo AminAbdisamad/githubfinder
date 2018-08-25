@@ -5,7 +5,9 @@ class UI {
     this.profile = document.querySelector('#profile');
     this.message = document.querySelector('#message');
   }
-  showMessage(message) {}
+  /**
+   * Display User profile
+   * */
   showUser(user) {
     this.profile.innerHTML = `<div class="">
     <div class="row">
@@ -58,6 +60,16 @@ class UI {
                     </div>
                 </div>`;
   }
+  /**
+   * Clear User profile
+   * */
+
+  clearProfile() {
+    this.profile.innerHTML = '';
+  }
+  /**
+   * Show User Repositories
+   * */
   showRepos(repos) {
     let output = '';
     repos.forEach(repo => {
@@ -86,5 +98,29 @@ class UI {
       </ul>`;
     });
     document.getElementById('showrepo').innerHTML = output;
+  }
+
+  /**
+   * Show Alert - Not Found
+   * */
+  showAlert(text, bgColor, txColor) {
+    const message = document.getElementById('message');
+    message.classList.add(`${bgColor}`, `${txColor}`);
+    message.style.padding = '10px';
+    message.style.textIndent = '10px';
+    message.innerHTML = text;
+    setTimeout(() => {
+      this.clearAlert();
+    }, 3000);
+  }
+  /**
+   * Clear Alert
+   * */
+
+  clearAlert() {
+    const alert = document.getElementById('message');
+    if (alert) {
+      alert.remove();
+    }
   }
 }
