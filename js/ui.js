@@ -104,23 +104,23 @@ class UI {
    * Show Alert - Not Found
    * */
   showAlert(text, bgColor, txColor) {
-    const message = document.getElementById('message');
-    message.classList.add(`${bgColor}`, `${txColor}`);
-    message.style.padding = '10px';
-    message.style.textIndent = '10px';
-    message.innerHTML = text;
+    const div = document.createElement('div');
+    div.classList.add(`${bgColor}`, `${txColor}`, 'alert');
+    div.style.padding = '10px';
+    div.style.margin = '5px';
+    div.style.textIndent = '10px';
+    div.style.borderRadius = '5px';
+    div.appendChild(document.createTextNode(text));
+    const alertPlaceHolder = document.querySelector('.alertPlaceHolder');
+    const searchUser = document.querySelector('.searchUser');
+    alertPlaceHolder.insertBefore(div, searchUser);
+    /**
+     * Clear Alert after 3s
+     * */
     setTimeout(() => {
-      this.clearAlert();
+      if (div) {
+        div.remove();
+      }
     }, 3000);
-  }
-  /**
-   * Clear Alert
-   * */
-
-  clearAlert() {
-    const alert = document.getElementById('message');
-    if (alert) {
-      alert.remove();
-    }
   }
 }
