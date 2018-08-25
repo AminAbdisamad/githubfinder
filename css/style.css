@@ -7,3 +7,6 @@ body {
 main {
   flex: 1 0 auto;
 }
+.mdl-badge[data-badge]:after {
+  right: -12px !important;
+}
