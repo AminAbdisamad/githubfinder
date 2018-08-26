@@ -12,10 +12,8 @@ function getUser(e) {
       //User Found
       if (data.profile.message !== 'Not Found') {
         ui.showUser(data.profile);
-        // console.log(data.profile);
         ui.showRepos(data.repos);
-        console.log(data.repos);
-      } else {
+
         //User could not found
         ui.showAlert('User Not Found', 'red', 'white-text');
       }
